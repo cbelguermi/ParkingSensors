@@ -17,17 +17,28 @@ public class Main {
         }
 
         boolean running = true;
-        Random randomGenerator = new Random();
+        //Random randomGenerator = new Random();
         int linesCount = IDataReader.getLinesCount(Paths.get("../res/data.txt"));
-        int randomLine;
+        //int randomLine;
+        int currentLineNb = 0;
 
         while (running)
         {
             for (Sensor sensor : sensors)
             {
-                randomLine = randomGenerator.nextInt(linesCount);
-                String line = IDataReader.getLine(Paths.get("../res/data.txt"), randomLine);
-
+                //randomLine = randomGenerator.nextInt(linesCount);
+                String line = IDataReader.getLine(Paths.get("../res/data.txt"), currentLineNb);
+                sensor.send(line);
+                currentLineNb++;
+            }
+            currentLineNb = 0;
+            try
+            {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException e)
+            {
+                return;
             }
         }
     }
