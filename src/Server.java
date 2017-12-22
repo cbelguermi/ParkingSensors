@@ -95,4 +95,9 @@ public class Server
     {
         return !(parking_places[placeNumber]);
     }
+
+    public boolean[] getPlaces()
+    {
+        return parking_places;
+    }
 }
