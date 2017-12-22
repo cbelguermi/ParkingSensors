@@ -2,7 +2,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ServerMain {
+public class Main {
 
     public static void main(String [] args)
     {
@@ -31,10 +31,11 @@ public class ServerMain {
                 sensor.send(line);
                 currentLineNb++;
             }
+            System.out.println ("===========================");
             currentLineNb = 0;
             try
             {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             }
             catch (InterruptedException e)
             {
