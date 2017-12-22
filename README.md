@@ -10,9 +10,13 @@ Chloé Belguermi et Damien Haurat.
 
 
 `cd ParkingSensors`
+
 `mkdir build`
+
 `cd build`
+
 `javac -d . ../src/*.java`
-`java Main``
+
+`java Main`
  
  Vous pouvez ensuite modifier le contenu du fichier res/data.txt pour voir la mise à jour du statut des places de parking.
