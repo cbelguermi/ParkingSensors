@@ -5,3 +5,14 @@ TP de programmation en Java pour simuler un espace de parking muni de capteurs d
 ## Équipe
 
 Chloé Belguermi et Damien Haurat.
+
+## Exécution rapide
+
+
+`cd ParkingSensors
+ mkdir build
+ cd build
+ javac -d . ../src/*.java
+ java Main`
+ 
+ Vous pouvez ensuite modifier le contenu du fichier res/data.txt pour voir mettre à jour le status des places de parking.
